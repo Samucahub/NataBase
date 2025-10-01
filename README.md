@@ -1,6 +1,5 @@
-<div align="center">
-<img src="https://github.com/Samucahub/NataBase/tree/main/Images/nata.png" alt="MiniLogo" width="360" height="360">
-</div>
+![logo](https://github.com/Samucahub/NataBase/blob/8651148f0682348e0d07abeef1214f7b6a3c84d2/Images/nata.png)
+
 <h3 align="center">NataBase</h3>
 
 ## Sobre o projeto
