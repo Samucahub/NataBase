@@ -1,0 +1,9 @@
+Bibliotecas em que é necessário o download:
+
+Kivy (framework base da UI)
+
+KivyMD (widgets Material Design para Kivy) — depende do Kivy estar instalado primeiro.
+
+gspread e oauth2client (para ler Google Sheets; teu código usa ambos)
+
+openpyxl (para gerar o Excel)
