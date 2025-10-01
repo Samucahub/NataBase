@@ -6,7 +6,7 @@
 
 <h1 align="center">NataBase</h1>
 
-<h2>Sobre o projeto</h2>
+<h3>Sobre o projeto</h3>
 
 Se és uma cafetaria, restaurante, whatever. Vieste ao software certo, o software que vai deixar esse stock tão organizado que o teu cônjuge vai ter inveja, da casa não estar igual.
 
