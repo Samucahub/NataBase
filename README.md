@@ -4,7 +4,7 @@
 </p>
 
 
-<h3 align="center">NataBase</h3>
+<h1 align="center">NataBase</h1>
 
 ## Sobre o projeto
 
