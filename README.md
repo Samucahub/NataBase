@@ -1,5 +1,6 @@
-![https://github.com/Samucahub/NataBase/Images/tree/nata.png](https://github.com/Samucahub/NataBase/tree/main/Images/nata.png)
-
+<div align="center">
+<img src="https://github.com/Samucahub/NataBase/tree/main/Images/nata.png" alt="MiniLogo" width="360" height="360">
+</div>
 <h3 align="center">NataBase</h3>
 
 ## Sobre o projeto
