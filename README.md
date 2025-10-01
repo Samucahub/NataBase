@@ -1,4 +1,6 @@
+<div align="center">
 ![logo](https://github.com/Samucahub/NataBase/blob/8651148f0682348e0d07abeef1214f7b6a3c84d2/Images/nata.png)
+</div>
 
 <h3 align="center">NataBase</h3>
 
