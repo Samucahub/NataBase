@@ -1,16 +1,13 @@
 <div align="center">
-  <img src="[https://github.com/user-attachments/assets/19c6c2a8-463b-40ed-9c5b-6706e78d5cc2](https://github.com/Samucahub/NataBase/Images/Nata.png)" alt="MiniLogo" width="190" height="190">
+  <img src="https://github.com/Samucahub/NataBase/Images/Nata.png" alt="MiniLogo" width="190" height="190">
 </div>
 
 
-<h3 align="center">CaraDBela</h3>
+<h3 align="center">NataBase</h3>
 
 ## Sobre o projeto
-<div align="center">
-<img src="https://github.com/davideferreira00/caraDBela/blob/main/design/BigLogoComSlogan.svg" alt="MiniLogo" width="360" height="360">
-</div>
 
-Somos uma base de dados modelar para dispositivos IoT que regista principalmente acessos suspeitos para monitorização, análise comportamental e resposta a incidentes de segurança, permitindo uma visão detalhada das interações com cada dispositivo na rede.
+Se és uma cafetaria, restaurante, whatever. Vieste ao software certo, o software que vai deixar esse stock tão organizado que o teu cônjuge vai ter inveja, da casa não estar igual.
 
 <p align="right"><a href="#readme-top">↑</a></p>
 
