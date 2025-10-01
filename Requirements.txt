@@ -1,0 +1,5 @@
+
+Kivy
+KivyMD
+gspread e oauth2client
+openpyxl
