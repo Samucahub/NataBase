@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/Samucahub/NataBase/Images/Nata.png" alt="MiniLogo" width="190" height="190">
+  <img src="https://github.com/Samucahub/NataBase/Images/nata.png" alt="MiniLogo" width="190" height="190">
 </div>
 
 
