@@ -1,7 +1,4 @@
-<div align="center">
-  <img src="[https://github.com/Samucahub/NataBase/Images/tree/nata.png](https://github.com/Samucahub/NataBase/tree/main/Images/nata.png)" alt="MiniLogo" width="190" height="190">
-</div>
-
+[https://github.com/Samucahub/NataBase/Images/tree/nata.png](https://github.com/Samucahub/NataBase/tree/main/Images/nata.png)
 
 <h3 align="center">NataBase</h3>
 
