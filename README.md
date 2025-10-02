@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="https://github.com/Samucahub/NataBase/blob/8651148f0682348e0d07abeef1214f7b6a3c84d2/Images/nata.png" alt="logo"/>
+  <img src="https://github.com/Samucahub/NataBase/blob/8651148f0682348e0d07abeef1214f7b6a3c84d2/LOGOS/natabase.png" alt="logo"/>
 </p>
 
 
