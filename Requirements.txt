@@ -3,3 +3,4 @@ Kivy
 KivyMD
 gspread e oauth2client
 openpyxl
+#para compilar ||| bzip2
