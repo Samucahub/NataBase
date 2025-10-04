@@ -41,10 +41,6 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
 
-    // Apache POI para Excel
-    implementation("org.apache.poi:poi:4.1.2")
-    implementation("org.apache.poi:poi-ooxml:4.1.2")
-
     // JavaMail (para envio de email)
     implementation("com.sun.mail:android-mail:1.6.7")
     implementation("com.sun.mail:android-activation:1.6.7")
@@ -55,4 +51,3 @@ dependencies {
     implementation("com.google.http-client:google-http-client-jackson2:1.43.3")
 
 }
-
