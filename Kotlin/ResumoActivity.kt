@@ -56,7 +56,7 @@ class ResumoActivity : AppCompatActivity() {
                 val emailService = EmailService(
                     senderEmail = "relatorioloja012@gmail.com",
                     senderAppPassword = "cwvt qgcg etrd ydzw",
-                    toAddresses = listOf("samu.plantaarvores@gmail.com")
+                    toAddresses = listOf("...@gmail.com")
                 )
                 emailService.sendExcel(file, "Resumo da Produção", "Segue o resumo em anexo.")
             } catch (e: Exception) {
