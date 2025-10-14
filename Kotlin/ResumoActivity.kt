@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.exemplo.natabase.utils.CacheManager
 import java.io.File
 import java.util.*
+import android.os.Environment
 
 class ResumoActivity : AppCompatActivity() {
 
@@ -32,7 +33,7 @@ class ResumoActivity : AppCompatActivity() {
                 produtos,
                 Date(),
                 "Resumo_${Date().time}.csv",
-                getExternalFilesDir(null) ?: filesDir
+                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
             )
             enviarEmail(file)
         }

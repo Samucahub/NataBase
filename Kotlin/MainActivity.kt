@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.exemplo.natabase.utils.CacheManager
 import android.content.Intent
 import com.google.android.material.appbar.MaterialToolbar
+import android.os.Environment
 
 class MainActivity : AppCompatActivity() {
 
@@ -123,7 +124,7 @@ class MainActivity : AppCompatActivity() {
             dicionarioProdutos,
             Date(),
             "Loja012_2025.csv",
-            getExternalFilesDir(null) ?: filesDir
+            Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
         )
         Toast.makeText(this, "Excel salvo em ${file.path}", Toast.LENGTH_LONG).show()
     }
