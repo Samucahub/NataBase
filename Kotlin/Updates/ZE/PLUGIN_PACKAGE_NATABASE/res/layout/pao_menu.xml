@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/caramel_background"
+    tools:context=".PaoMenuActivity">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/deep_brown"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+
+        <!-- Left: User Circle + Label -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/imageUser"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:contentDescription="@string/user_label"
+                android:src="@drawable/ic_user" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/inclusive_sans"
+                android:text="@string/user_label"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <!-- Center: App Name + Logo -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inclusive_sans"
+                android:text="@string/natabase"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="12dp"
+                android:contentDescription="@string/natabase"
+                android:src="@drawable/logo_placeholder" />
+        </LinearLayout>
+
+        <!-- Right: Action Buttons + Clock -->
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonEnviar"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/button_topbar"
+                android:fontFamily="@font/inclusive_sans"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/enviar"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/buttonRestart"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/button_topbar"
+                android:fontFamily="@font/inclusive_sans"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/restart"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/buttonLogout"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/button_topbar"
+                android:fontFamily="@font/inclusive_sans"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/logout"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Main Content Area with 3-column layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <!-- Left Side Image -->
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/padariabackground_login"
+            tools:ignore="NestedWeights" />
+
+        <!-- Center Content -->
+        <LinearLayout
+            android:layout_width="725dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="40dp"
+            android:paddingBottom="60dp">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:fontFamily="@font/inclusive_sans"
+                android:text="@string/paos_title"
+                android:textColor="#ffffff"
+                android:textSize="60sp"
+                tools:ignore="TextContrastCheck" />
+
+            <!-- Product Grid (2 rows x 3 columns) -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:alignmentMode="alignBounds"
+                android:columnCount="3"
+                android:columnOrderPreserved="false"
+                android:rowCount="2"
+                android:useDefaultMargins="false">
+
+                <!-- Row 1, Col 1: BAGUETE -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardBaguete"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <!-- Background Image -->
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/baguete"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/padariabackground_login" />
+
+                        <!-- Translucent Brown Overlay -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/overlay_brown_translucent" />
+
+                        <!-- Text Label -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/inclusive_sans"
+                            android:gravity="center"
+                            android:text="@string/baguete"
+                            android:textColor="@color/white"
+                            android:textSize="60sp" />
+                    </FrameLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Row 1, Col 2: BAGUETE -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardBolaLenha"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <!-- Background Image -->
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/bola_lenha"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/padariabackground_login" />
+
+                        <!-- Translucent Brown Overlay -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/overlay_brown_translucent" />
+
+                        <!-- Text Label -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/inclusive_sans"
+                            android:gravity="center"
+                            android:text="@string/bola_lenha"
+                            android:textColor="@color/white"
+                            android:textSize="60sp" />
+                    </FrameLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Row 1, Col 3: PÃO CEREAIS -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardPaoCereais"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <!-- Background Image -->
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/pao_cereais"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/padariabackground_login" />
+
+                        <!-- Translucent Brown Overlay -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/overlay_brown_translucent" />
+
+                        <!-- Text Label -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/inclusive_sans"
+                            android:gravity="center"
+                            android:text="@string/pao_cereais"
+                            android:textColor="@color/white"
+                            android:textSize="60sp" />
+                    </FrameLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Row 2, Col 1: PÃO RUSTICO FATIAS -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardPaoRusticoFatias"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <!-- Background Image -->
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/pao_rustico_fatias"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/padariabackground_login" />
+
+                        <!-- Translucent Brown Overlay -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/overlay_brown_translucent" />
+
+                        <!-- Text Label -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/inclusive_sans"
+                            android:gravity="center"
+                            android:text="@string/pao_rustico_fatias"
+                            android:textColor="@color/white"
+                            android:textSize="52sp" />
+                    </FrameLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Row 2, Col 2: Empty Placeholder -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:clickable="false"
+                    android:alpha="0.3"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/app_name"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/padariabackground_login" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/overlay_brown_translucent" />
+                    </FrameLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Row 2, Col 3: Empty Placeholder -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_row="1"
+                    android:layout_column="2"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:clickable="false"
+                    android:alpha="0.3"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/app_name"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/padariabackground_login" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/overlay_brown_translucent" />
+                    </FrameLayout>
+                </androidx.cardview.widget.CardView>
+
+            </GridLayout>
+
+            <!-- Spacer to push content up -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <!-- Back Button -->
+            <Button
+                android:id="@+id/buttonRetroceder"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_back"
+                android:fontFamily="@font/inclusive_sans"
+                android:minWidth="200dp"
+                android:paddingStart="32dp"
+                android:paddingEnd="32dp"
+                android:text="@string/retroceder"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <!-- Right Side Image -->
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/padariabackground_login" />
+
+    </LinearLayout>
+
+</LinearLayout>
