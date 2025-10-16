@@ -36,6 +36,6 @@ Não te esqueças de dar uma estrela ao projeto! Obrigado novamente!
 <!-- LICENSE -->
 ## Licensa
 
-Não copies, não roubes, não espalhes. De resto é tranquilo, usa á vontade!
+Não copies, não roubes, não espalhes. De resto **paga**!
 
 <p align="right"><a href="#readme-top">↑</a></p>
