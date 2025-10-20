@@ -1,5 +1,9 @@
 # Aviso criação código Python | Arquivação do projeto
 
+<p align="center">
+  <img src="../Images/NataBaseNoLongerPython.png" alt="COVER" width="400"/>
+</p>
+
 O código deste projeto foi originalmente desenvolvido em **Python**. No entanto, percebemos que:
 
 - Compilar e gerar um APK a partir do Python estava era pouco prático e consumia muito tempo.
