@@ -160,4 +160,4 @@ Neste sprint tratamos de organizar, reestruturar e documentar partes do projeto 
 Apesar de serem tarefas que ninguém gosta de fazer, todos os projetos devem ser bem documentados e comentados.  
 Discutimos ideias futuras e arquivámos numa pasta do GitHub chamada **“ideias futuras”** (apenas notas, sem código).  
 O desenvolvimento da aplicação e da sua função principal está quase terminado:  
-o frontend está quase perfeito e o código está seguro e bem estruturado.
+o frontend está imensamente próximo de perfeito e o código está seguro e bem estruturado.
