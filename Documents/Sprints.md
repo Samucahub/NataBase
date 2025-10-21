@@ -25,7 +25,7 @@ Pretendemos montar o esqueleto do projeto, um pequeno UML para servir de orienta
 - **Rodrigo:** Responsável pelo desenvolvimento do código em Python.  
 - **Rafael:** Aprendeu a compilar em Python e sugeriu a conversão do código para a linguagem Kotlin.  
 - **Samuel:** Dedicou-se a melhorar o código em Python desenvolvido pelo Rodrigo.  
-- **Zé Pedro:** Responsável pela criação do logótipo do projeto e escolha da palete de cores para o website.  
+- **Zé:** Responsável pela criação do logótipo do projeto e escolha da palete de cores para o website.  
 - **Davide:** Encarregou-se da distribuição de informações pelo grupo, abordando as partes económica e jurídica do projeto.  
 
 ---
@@ -62,7 +62,7 @@ Apesar da compatibilidade com mobile, ainda não é tão compatível connosco po
 ### Daily Scrum Meeting
 - **Rodrigo, Rafael e Samuel:** Conversão do código de Python para Kotlin.  
 - **Davide:** Elaboração do caso de uso do projeto.  
-- **Zé Pedro:** Criação da decisão final do logótipo do projeto e começo da preparação do frontend da aplicação.  
+- **Zé:** Criação da decisão final do logótipo do projeto e começo da preparação do frontend da aplicação.  
 
 ---
 
