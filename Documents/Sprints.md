@@ -122,7 +122,7 @@ Conseguimos criar uma pequena aplicação com login via OAuth — só falta impl
 
 ## Sprint Nº 3
 
-### 🧾 Sprint Backlog
+### Sprint Backlog
 - Criação dos botões da aplicação  
 - Organização da documentação  
 - Obfuscação de código  
