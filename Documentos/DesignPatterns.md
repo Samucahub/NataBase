@@ -59,7 +59,7 @@ O app registaa bolos vendidos durante o dia e envia um relatório diário para o
 
 
 ---
-## 3. Facade (Fachada) - Olá Zé, devias falar deste, trataste do design, fizeste a fachada
+## 3. Facade (Fachada) - Zé
 
 **Objetivo:** Fornecer uma **interface simplificada** para um conjunto de funcionalidades complexas.
 
@@ -84,7 +84,7 @@ O app registaa bolos vendidos durante o dia e envia um relatório diário para o
 - Facilita mudanças internas sem impactar quem usa a fachada.
 
 ---
-## 4. Strategy (Estratégia)
+## 4. Strategy (Estratégia) - Samuel
 
 **Objetivo:** Permitir que um algoritmo ou comportamento seja **trocado dinamicamente** sem modificar o objeto que o usa.
 
