@@ -1,32 +1,45 @@
 # Design Patterns
 
-## 1. Observer (Observador) - Rafa
-**Objetivo:** Permitir que vários objetos sejam notificados automaticamente quando o estado de outro objeto muda.
+## 6. Chain of Responsibility (Cadeia de Responsabilidade) – Rafa  
+**Objetivo:**  
+Permitir que uma requisição passe por **vários filtros ou etapas de validação**, onde cada etapa decide se processa o pedido ou o encaminha para o próximo, **sem que o remetente saiba quem o vai tratar**.  
 
 **Situação:**  
-O app registaa bolos vendidos durante o dia e envia um relatório diário para o gerente por email no fim do dia.
+O app precisa aceder ao **Google Sheets** para carregar e guardar a produção diária do café, mas é necessário garantir que:  
+1. O **token OAuth 2.0** é válido.  
+2. O utilizador tem **permissão** para aceder ao ficheiro.  
+3. O pedido está **bem formatado** e **seguro** antes de ser enviado.  
+
+Essas verificações podem ser organizadas numa **cadeia de responsabilidade**, onde cada verificador trata apenas da sua parte e passa o pedido ao próximo.  
 
 ---
 
-## Como o Observer se aplica
+## Como o Chain of Responsibility se aplica  
 
-- **Sujeito (Subject) ou Publisher:** Registro de vendas de bolos
-  - É o objeto que mantém o estado (vendas do dia) e notifica os observadores quando algo muda.
+- **Handler 1 – Autenticação:**  
+  - Verifica se o token OAuth ainda é válido; se não for, renova-o.  
 
-- **Observador (Observer) ou Subscriber:** Relatório diário  
-  - É o objeto que “escuta” o sujeito, atualiza os dados internamente e gera o relatório no fim do dia.
+- **Handler 2 – Permissão:**  
+  - Confirma se o utilizador tem acesso ao *spreadsheet* do Google Sheets.  
 
-**Fluxo de funcionamento:**
+- **Handler 3 – Validação de Pedido:**  
+  - Garante que os dados enviados estão no formato certo e não contêm erros.  
 
-1. Cada vez que um bolo é registrado, o **sujeito** notifica os **observadores**.  
-2. O **observador** atualiza internamente os dados (total de bolos, valores, etc.).  
-3. No fim do dia, o **observador** gera e envia o relatório para o gerente.
+Cada *handler* executa a sua verificação e, se tudo estiver bem, o pedido segue para o próximo. Se alguma etapa falhar, a cadeia é interrompida e o erro é tratado imediatamente.  
 
-## Vantagens:
+**Fluxo de funcionamento:**  
 
-- Mantém a lógica de **gerar relatório separada** da lógica de registrar bolos.  
-- Facilita **adicionar novos observadores** (como log de vendas ou análise de stock) sem alterar o código principal.  
-- Permite que múltiplas ações dependentes do registro de bolos sejam **executadas automaticamente** sempre que um novo bolo é registrado.
+1. O utilizador tenta carregar ou enviar a produção do dia.  
+2. O pedido entra na cadeia de verificações (autenticação → permissão → validação).  
+3. Se todas as verificações passarem, o pedido é finalmente enviado ao Google Sheets.  
+4. Se alguma falhar (por exemplo, token expirado), o processo é parado e o app mostra o erro.  
+
+## Vantagens:  
+
+- **Segurança modular:** cada parte da verificação é isolada e pode ser alterada sem afetar o resto.  
+- **Extensibilidade:** é fácil adicionar novos passos (ex.: logs de auditoria, verificação de rede, etc.).  
+- **Código mais limpo:** elimina grandes blocos de *if/else* e condições aninhadas.  
+- **Reutilização:** os mesmos *handlers* podem ser usados noutros fluxos de validação.  
 
 ---
 
