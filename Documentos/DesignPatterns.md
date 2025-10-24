@@ -30,7 +30,7 @@ O app registaa bolos vendidos durante o dia e envia um relatório diário para o
 
 ---
 
-## 2. Singleton
+## 2. Singleton - Davide
 
 **Objetivo:** Garantir que **uma classe tenha apenas uma instância** e fornecer um **ponto global de acesso** à classe.
 
@@ -121,7 +121,7 @@ O app registaa bolos vendidos durante o dia e envia um relatório diário para o
 
 ---
 
-## 5. Template Method (Método Template)
+## 5. Template Method (Método Template) - Rodrigo
 
 **Objetivo:** Definir a **estrutura geral de um algoritmo**, permite que algumas etapas sejam implementadas por subclasses.
 
