@@ -1,6 +1,6 @@
 # Design Patterns
 
-## 6. Chain of Responsibility (Cadeia de Responsabilidade) – Rafa  
+## 1. Chain of Responsibility (Cadeia de Responsabilidade) – Rafa  
 **Objetivo:**  
 Permitir que uma requisição passe por **vários filtros ou etapas de validação**, onde cada etapa decide se processa o pedido ou o encaminha para o próximo, **sem que o remetente saiba quem o vai tratar**.  
 
