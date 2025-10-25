@@ -248,8 +248,6 @@ MainActivity
 
 ## Conclusão
 
-A aplicação do **Factory Method Pattern** na `MainActivity` trouxe benefícios significativos com um custo mínimo:
-
 -  **Código mais limpo e organizado**
 -  **Fácil de testar e manter**
 -  **Preparado para crescimento futuro**
