@@ -20,27 +20,32 @@ Este documento explica a aplicação do **Factory Method Pattern**. O objetivo f
 ### Código Antes (Duplicação)
 
 ```kotlin
+// Função que mostra um diálogo de confirmação para limpar todas as produções
 private fun mostrarDialogoLimpeza() {
+    // Cria um AlertDialog com o contexto atual da Activity
     AlertDialog.Builder(this)
-        .setTitle("Limpar Produções")
-        .setMessage("Tem certeza que deseja limpar TODAS as produções? Esta ação não pode ser desfeita.")
-        .setPositiveButton("Sim") { _, _ ->
-            limparProducoes()
+        .setTitle("Limpar Produções") // título do diálogo
+        .setMessage("Tem certeza que deseja limpar TODAS as produções? Esta ação não pode ser desfeita.") // mensagem do diálogo
+        .setPositiveButton("Sim") { _, _ ->         // cria o botão sim e a ação a executar quando o botão for clicado
+            limparProducoes() // Chama a função limparProducoes() quando o utilizador clicar "Sim"
         }
-        .setNegativeButton("Cancelar", null)
-        .show()
+        .setNegativeButton("Cancelar", null) // cria o botão não e a ação null significa que não faz nada
+        .show()         // Mostra o diálogo na tela
 }
 
+// Função que mostra um diálogo de confirmação para criar um novo Excel
 private fun mostrarDialogoRegeneracao() {
+    // Cria um AlertDialog com o contexto atual da Activity
     AlertDialog.Builder(this)
-        .setTitle("Criar Novo Excel")
-        .setMessage("Tem a certeza que deseja criar um NOVO arquivo Excel? Isto apagará o arquivo atual e criará um novo com a estrutura correta (sem Validade Exposição).")
-        .setPositiveButton("Sim") { _, _ ->
-            regenerarExcelCompleto()
+        .setTitle("Criar Novo Excel") // título do diálogo
+        .setMessage("Tem a certeza que deseja criar um NOVO arquivo Excel? Isto apagará o arquivo atual e criará um novo com a estrutura correta (sem Validade Exposição).") // mensagem do diálogo
+        .setPositiveButton("Sim") { _, _ -> // cria o botão "Sim" e define a ação quando clicado
+            regenerarExcelCompleto() // chama a função regenerarExcelCompleto() quando o utilizador clicar "Sim"
         }
-        .setNegativeButton("Cancelar", null)
-        .show()
+        .setNegativeButton("Cancelar", null) // cria o botão "Cancelar", ação null significa que não faz nada
+        .show() // mostra o diálogo na tela
 }
+
 ```
 
 ### Problemas
@@ -61,23 +66,29 @@ O **Factory Method** é um padrão de design criacional que fornece uma interfac
 ### Implementação
 
 ```kotlin
+// Esta é uma fábrica de pop-ups de confirmação
 object DialogFactory {
+    
+    // Cria o pop-up "tens certeza que queres limpar?"
     fun criarDialogoLimpeza(
-        context: Context,
-        onConfirm: () -> Unit
-    ): AlertDialog {
+        context: Context,         // 'this' da tua Activity
+        onConfirm: () -> Unit     // Função que corre se clicar "Sim"
+    ): AlertDialog {              // Devolve o pop-up
+        
         return AlertDialog.Builder(context)
             .setTitle("Limpar Produções")
             .setMessage("Tem certeza que deseja limpar TODAS as produções? Esta ação não pode ser desfeita.")
-            .setPositiveButton("Sim") { _, _ -> onConfirm() }
-            .setNegativeButton("Cancelar", null)
+            .setPositiveButton("Sim") { _, _ -> onConfirm() }  // Se clicar "Sim", corre onConfirm
+            .setNegativeButton("Cancelar", null)               // Se clicar "Cancelar", fecha
             .create()
     }
-
+    
+    // Cria o pop-up "tens certeza que queres criar novo Excel?"
     fun criarDialogoRegeneracao(
         context: Context,
         onConfirm: () -> Unit
     ): AlertDialog {
+        
         return AlertDialog.Builder(context)
             .setTitle("Criar Novo Excel")
             .setMessage("Tem certeza que deseja criar um NOVO arquivo Excel? Isto apagará o arquivo atual e criará um novo com a estrutura correta (sem Validade Exposição).")
@@ -128,14 +139,22 @@ private fun mostrarDialogoLimpeza() {
 
 #### DEPOIS
 ```kotlin
+// Função que mostra um diálogo de confirmação para limpar todas as produções
 private fun mostrarDialogoLimpeza() {
+    // Chama a função criarDialogoLimpeza da DialogFactory
+    // Passa o contexto atual (this) e a ação a executar quando o utilizador clicar "Sim"
     DialogFactory.criarDialogoLimpeza(this) {
+        // Funcção que vai ser executada quando utilizador clicar sim
+        // Neste caso, chama a função limparProducoes()
         limparProducoes()
-    }.show()
+    }
+    // Mostra o diálogo na tela
+    .show()
 }
+
 ```
 
-**Redução**: De 9 linhas para 3 linhas! 📉
+**Redução**: De 9 linhas para 3 linhas!
 
 ---
 
