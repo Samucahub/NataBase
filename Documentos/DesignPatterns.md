@@ -1,32 +1,44 @@
 # Design Patterns
 
-## 1. Observer (Observador) - Rafa
-**Objetivo:** Permitir que vários objetos sejam notificados automaticamente quando o estado de outro objeto muda.
+## 1. Factory (Fábrica) - Rafa
+
+**Objetivo:**  
+Centralizar a criação de diálogos do app, permite criar AlertDialogs de forma consistente e limpa, sem repetir código.
 
 **Situação:**  
-O app registaa bolos vendidos durante o dia e envia um relatório diário para o gerente por email no fim do dia.
+O app precisa mostrar diálogos de confirmação para **limpar produções** ou **criar um novo Excel**, com ações diferentes dependendo do botão clicado, no futuro, ao aplicarmos várias roles, iríamos ter de reescrever cada diálogo para cada user e isso ía crescer o código.
 
 ---
 
-## Como o Observer se aplica
+## Como o DialogFactory se aplica
 
-- **Sujeito (Subject) ou Publisher:** Registro de vendas de bolos
-  - É o objeto que mantém o estado (vendas do dia) e notifica os observadores quando algo muda.
+- **Fábrica (Factory):** `DialogFactory`  
+  - É o objeto singleton que cria os diálogos (`AlertDialog`) para qualquer Activity que precise, sem expor a lógica de construção.  
+  - Contém funções como `criarDialogoLimpeza()` e `criarDialogoRegeneracao()`.
 
-- **Observador (Observer) ou Subscriber:** Relatório diário  
-  - É o objeto que “escuta” o sujeito, atualiza os dados internamente e gera o relatório no fim do dia.
+- **Client (Cliente):** `MainActivity`  
+  - Chama a fábrica e passa o **contexto** e a **ação a executar** quando o utilizador confirma.  
+  - Não precisa saber como o diálogo é construído, apenas recebe um AlertDialog pronto para mostrar.
 
 **Fluxo de funcionamento:**
 
-1. Cada vez que um bolo é registrado, o **sujeito** notifica os **observadores**.  
-2. O **observador** atualiza internamente os dados (total de bolos, valores, etc.).  
-3. No fim do dia, o **observador** gera e envia o relatório para o gerente.
+1. O `MainActivity` quer mostrar um diálogo de confirmação.  
+2. Chama a função correspondente da `DialogFactory`, passa:  
+   - `context` → o contexto da Activity  
+   - `onConfirm` → a função a executar quando o user clicar “Sim”  
+3. A fábrica cria o `AlertDialog` com título, mensagem, botões e ação positiva.  
+4. O MainActivity chama `.show()` no diálogo retornado, mostrando-o na tela.  
+5. Quando o utilizador clica “Sim”, a lambda `onConfirm` é executada (por exemplo, `limparProducoes()` ou `regenerarExcelCompleto()`).
+
+---
 
 ## Vantagens:
 
-- Mantém a lógica de **gerar relatório separada** da lógica de registrar bolos.  
-- Facilita **adicionar novos observadores** (como log de vendas ou análise de stock) sem alterar o código principal.  
-- Permite que múltiplas ações dependentes do registro de bolos sejam **executadas automaticamente** sempre que um novo bolo é registrado.
+- Mantém a lógica de **criação de diálogos separada** do código da Activity.  
+- Evita **repetição de código** em várias Activities ou funções.  
+- Facilita **alterar títulos, mensagens ou botões** de todos os diálogos num único lugar.  
+- Permite passar qualquer **ação personalizada** para o botão “Sim”, torna o diálogo **flexível e reutilizável**.
+
 
 ---
 
