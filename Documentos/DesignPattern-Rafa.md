@@ -66,13 +66,13 @@ O **Factory Method** é um padrão de design criacional que fornece uma interfac
 ### Implementação
 
 ```kotlin
-// Esta é uma fábrica de pop-ups de confirmação
+// Factory de pop ups
 object DialogFactory {
     
     // Cria o pop-up "tens certeza que queres limpar?"
     fun criarDialogoLimpeza(
-        context: Context,         // 'this' da tua Activity
-        onConfirm: () -> Unit     // Função que corre se clicar "Sim"
+        context: Context,         // 'this' da Activity
+        onConfirm: () -> Unit     // Função que corre ao clicar "Sim"
     ): AlertDialog {              // Devolve o pop-up
         
         return AlertDialog.Builder(context)
