@@ -243,7 +243,7 @@ MainActivity
   │     └── criarDialogoRegeneracao() [apenas cria]
   ├── mostrarDialogoLimpeza() [usa factory + mostra]
   └── mostrarDialogoRegeneracao() [usa factory + mostra]
-
+```
 ---
 
 ## Conclusão
