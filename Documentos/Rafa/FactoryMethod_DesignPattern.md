@@ -243,16 +243,6 @@ MainActivity
   │     └── criarDialogoRegeneracao() [apenas cria]
   ├── mostrarDialogoLimpeza() [usa factory + mostra]
   └── mostrarDialogoRegeneracao() [usa factory + mostra]
-```
-
-### Métricas
-
-| Métrica | Antes | Depois | Melhoria |
-|---------|-------|--------|----------|
-| Duplicação de código | Alta | Nenhuma |  100% |
-| Linhas por método de exibição | 9 | 3 |  -67% |
-| Pontos de manutenção | 2+ | 1 |  -50% |
-| Testabilidade | Baixa | Alta |  +100% |
 
 ---
 
