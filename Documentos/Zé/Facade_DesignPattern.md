@@ -337,5 +337,5 @@ Cada classe tem um propósito claro e bem definido.
 
 ### Conclusão
 
-No projeto NataBase, a aplicação do padrão Facade transformou uma operação complexa de 70 linhas em apenas 10 linhas simples. A Activity passou de gerir 6 responsabilidades diferentes para apenas uma: reagir ao resultado do envio. O código tornou-se mais legível, testável e fácil de manter, demonstrando que o Facade não é apenas teoria, mas uma solução prática com impacto real na qualidade do software.
+No projeto NataBase, a aplicação do padrão Facade transformou uma operação complexa de 70 linhas em apenas 19 linhas simples. A Activity passou de gerir 6 responsabilidades diferentes para apenas uma: reagir ao resultado do envio. O código tornou-se mais legível, testável e fácil de manter, demonstrando que o Facade não é apenas teoria, mas uma solução prática com impacto real na qualidade do software.
 
