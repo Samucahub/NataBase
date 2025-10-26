@@ -4,4 +4,4 @@
 
 # Switch Statements - Samu
 
-# Single Responsibility Principle - Zé
+# Middle Man - Zé
