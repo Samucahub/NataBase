@@ -286,7 +286,3 @@ ConfigActivity [define a estratégia e aplica]
 * ✅ Ideal para comportamentos alternáveis
 
 O **Strategy Pattern** permite que a `ConfigActivity` trate diferentes tipos de diretório **sem duplicação de lógica**, mantendo o código organizado e preparado para crescimento futuro.
-
----
-
-Queres que eu te gere o código completo do `DirectoryManager` e das `Strategies` como ficheiros Kotlin prontos para colar no teu projeto (`/utils` por exemplo)?
