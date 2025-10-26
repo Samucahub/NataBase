@@ -6,7 +6,7 @@
 
 ---
 
-## 🏆 Sobre o projeto
+## Sobre o projeto
 
 **NataBase** é uma aplicação pensada para gerir stocks de cafés, restaurantes ou qualquer negócio que precise de controlo eficiente de inventário. Organiza os produtos, envia relatórios automáticos por email, protege os teus dados e torna a tua gestão mais profissional (e invejável para qualquer cônjuge que adore ordem!).  
 
