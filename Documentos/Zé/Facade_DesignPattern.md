@@ -256,7 +256,7 @@ class ResumoActivity : AppCompatActivity() {
 }
 ```
 
-**O resultado:** De 70+ linhas complexas para 10 linhas simples. A Activity não conhece detalhes de SMTP, validação de rede ou gestão de erros - apenas chama a facade e reage ao resultado.
+**O resultado:** De 70+ linhas complexas para 19 linhas simples. A Activity não conhece detalhes de SMTP, validação de rede ou gestão de erros - apenas chama a facade e reage ao resultado.
 
 ---
 
@@ -266,7 +266,7 @@ class ResumoActivity : AppCompatActivity() {
 
 | Aspeto | **Sem Facade** | **Com Facade** |
 |--------|----------------|----------------|
-| **Linhas de Código** | 70+ linhas | 10 linhas |
+| **Linhas de Código** | 70+ linhas | 19 linhas |
 | **Responsabilidades** | 6 (rede, SMTP, threads, erros, dados, UI) | 1 (reagir ao resultado) |
 | **Dependências** | Socket, ConnectivityManager, EmailService, Dispatchers | Apenas EmailReportFacade |
 | **Testabilidade** | Difícil - requer mocks complexos | Fácil - mock simples da facade |
