@@ -1,5 +1,9 @@
 # Single Responsibility Principle - Davide
 
-# Dependency Inversion Principle - Samu
+
 
 # Liskov Substitution Principle - Na calculadora - Rafa
+
+# Interface segregation principle - Zé 
+
+# Dependency Inversion Principle - Samu
