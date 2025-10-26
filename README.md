@@ -48,7 +48,9 @@ Se tiveres sugestões para melhorar este projeto, faz um fork e envia um pull re
 2. Cria um branch com a tua feature (`git checkout -b feature/NomeDaFeature`)  
 3. Faz commit às alterações (`git commit -m 'Adiciona feature X'`)  
 4. Faz push para o branch (`git push origin feature/NomeDaFeature`)  
-5. Abre uma pull request e vamos rever!  
+5. Abre uma pull request e vamos rever!
+
+## Kiss Les Devs
 
 <p align="center">
   <a href="https://github.com/Samucahub/NataBase/graphs/contributors">
