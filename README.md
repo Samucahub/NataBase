@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/Images/NataBase_BigLogo.png" alt="logo" style="display:block; margin:0 auto;"/>
+  <img src="/Images/NataBase_BigLogo.png" alt="logo" width="900"/>
 </p>
 
 <h1 align="center">NataBase</h1>
