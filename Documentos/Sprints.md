@@ -144,7 +144,7 @@ Este sprint será mais voltado à documentação — tudo “extra” que fizerm
 
 ### Daily Scrum Meeting
 - **Rodrigo:** Orientação do relatório e revisão da documentação.  
-- **Samuel:** Organização e atualização das funções que criam o Excel, enviam emails e recebem a planilha de produção. Implementação de princípios OOP.  
+- **Samuel:** Organização e atualização das funções que criam o Excel, enviam emails e recebem a planilha de produção. Implementação de princípios OOP. Implementação da autenticação via OAuth2.0.  
 - **Davide:** Continuação da documentação dos sprints.  
 - **Rafael:** Implementação da autenticação via OAuth2.0, aprendizagem e aplicação da obfuscação do código, reestruturação do UML e dos sprints.  
 - **Zé:** Continuação da criação do frontend do projeto e conversão para código.  
@@ -161,3 +161,41 @@ Apesar de serem tarefas que ninguém gosta de fazer, todos os projetos devem ser
 Discutimos ideias futuras e arquivámos numa pasta do GitHub chamada **“ideias futuras”** (apenas notas, sem código).  
 O desenvolvimento da aplicação e da sua função principal está quase terminado:  
 o frontend está imensamente próximo de perfeito e o código está seguro e bem estruturado.
+
+---
+
+## Sprint Nº 4
+
+### Sprint Backlog
+- Aplicação dos SOLID principles
+- Aplicação dos Refactorings
+- Aplicação dos Design Patterns
+- Fim da documentação do projeto
+- Fim do design do projeto
+- Rápido ajuste de validação de tampering
+- Apresentação indívual
+- Apresentação do projeto
+
+---
+
+### Sprint Planning
+Neste sprint vamos acabar o desenvolvimento da aplicação e da restante documentação, como o professor pediu, vamos aplicar os SOLID principles, realizar refactoring e aplicar os design patterns, vamos também fazer a apresentação índividual (teste) e a apresentação do projeto.
+
+---
+
+### Daily Scrum Meeting
+- **Rodrigo:** Fim da documentação do código e do projeto. Aplicação de SOLID principles, refactoring e design patterns. Apresentação índividual e apresentação do projeto.
+- **Samuel:** Fim do desenvolvimento do código. Aplicação de SOLID principles, refactoring e design patterns. Apresentação índividual e apresentação do projeto.
+- **Davide:** Aplicação de SOLID principles, refactoring e design patterns. Apresentação índividual e apresentação do projeto.
+- **Rafael:** Validação de tampering da aplicação. Aplicação de SOLID principles, refactoring e design patterns. Apresentação índividual e apresentação do projeto.
+- **Zé:** Fim do design do projeto. Aplicação de SOLID principles, refactoring e design patterns. Apresentação índividual e apresentação do projeto.
+
+---
+
+### Sprint Review
+Fim da disciplina e do projeto, o relatório está feito, o design também a segurança está tratada. Adicionamos uma pequena validação de tampering que não deixa iniciar a app caso esta seja modificada.
+
+---
+
+### Sprint Retrospective
+Está tudo terminado, apesar da aplicação dos princípio ter ocupado bastante do nosso tempo, vamos apresentar daqui a pouquinho o projeto completo e ver o que o professor acha.
