@@ -1,41 +1,63 @@
-
 <p align="center">
-  <img src="https://github.com/Samucahub/NataBase/blob/a11dd3180472dd86c6b59d78127cc14d04f4d8f7/LOGOS/natabase.png" alt="logo"/>
+  <img src="/Images/NataBase_BigLogo.png" alt="logo"/>
 </p>
-
 
 <h1 align="center">NataBase</h1>
 
-<h3>Sobre o projeto</h3>
+## Sobre o projeto
 
-Se és uma cafetaria, restaurante, whatever. Vieste ao software certo, o software que vai deixar esse stock tão organizado que o teu cônjuge vai ter inveja, da casa não estar igual.
+**NataBase** é uma aplicação pensada para gerir stocks de cafés, restaurantes ou qualquer negócio que precise de controlo eficiente de inventário. Organiza os produtos, envia relatórios automáticos por email, protege os teus dados e torna a tua gestão mais profissional (e invejável para qualquer cônjuge que adore ordem!).  
 
-<p align="right"><a href="#readme-top">↑</a></p>
+### Funcionalidades principais
+- Gestão de stocks adaptável a qualquer tipo de negócio.
+- Envio automático de emails com produção no final do dia.
+- Obfuscação dos dados e do código para maior segurança. (O código aqui não está obfuscado para o professor conseguir analisar)
+- Validação contra **tampering** (alterações maliciosas nos dados e no código da aplicação)
+- Protocolos seguros de comunicação (SMTP).
+- Autenticação e autorização via **OAuth 2.0**.
+- Possibilidade de expansão para múltiplos tipos de utilizadores (gerente, funcionário, etc.).
+- Planeamos implementar **métodos “top-down visibility” (ou Bell–LaPadula model)**: o gerente vê tudo, o funcionário só vê o que precisa.
 
-<!-- CONTRIBUTING -->
+---
+
+## Tecnologias
+
+- Linguagens: `Kotlin`
+- Base de dados: `Excel`
+- Autenticação: `OAuth 2.0`
+- Segurança: Obfuscação, validação de integridade, protocolos seguros.
+
+---
+
+##  Próximos Passos
+
+- Adicionar níveis de utilizadores (gerente e funcionário).
+- Implementar métodos avançados de acesso, onde certos dados estão visíveis apenas a quem deve.
+- Melhorar relatórios automáticos e métricas de produção.
+- Possível extensão para pedidos por parte do cliente.
+
+---
+
 ## Contribuições
 
+Se tiveres sugestões para melhorar este projeto, faz um fork e envia um pull request ou abre uma issue com a etiqueta **melhoria**. Dá lá uma estrelinha ao projeto que é fixe!  
 
-Se tiveres uma sugestão que melhore este projeto, por favor faz um fork do repositório e cria um pull request. Também podes simplesmente abrir uma issue com a etiqueta "melhoria".
-Não te esqueças de dar uma estrela ao projeto! Obrigado novamente!
+1. Fork do repositório  
+2. Cria um branch com a tua feature (`git checkout -b feature/NomeDaFeature`)  
+3. Faz commit às alterações (`git commit -m 'Adiciona feature X'`)  
+4. Faz push para o branch (`git push origin feature/NomeDaFeature`)  
+5. Abre uma pull request e vamos rever!
 
-1. Fork o repositório
-2. Cria um branch com a tua feature (`git checkout -b feature/FeatureFixe`)
-3. Faz commit ás alterações (`git commit -m 'Add some FeatureFixe'`)
-4. Faz push para a branch (`git push origin feature/FeatureFixe`)
-5. Abre uma pull request e nós iremos verificar!
+## Kiss Les Devs
 
-<p align="right"><a href="#readme-top">↑</a></p>
+<p align="center">
+  <a href="https://github.com/Samucahub/NataBase/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=Samucahub/NataBase" />
+  </a>
+</p>
 
-### Kiss the devs:
+---
 
-<a href="https://github.com/Samucahub/NataBase/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Samucahub/NataBase" />
-</a>
+## Licença
 
-<!-- LICENSE -->
-## Licensa
-
-Não copies, não roubes, não espalhes. De resto é tranquilo, usa á vontade!
-
-<p align="right"><a href="#readme-top">↑</a></p>
+Não copies, não roubes, não espalhes. De resto, **paga e diverte-te!**
