@@ -2,4 +2,4 @@
 
 # Dependency Inversion Principle - Samu
 
-#Liskov Substitution Principle - Na calculadora - Rafa
+# Liskov Substitution Principle - Na calculadora - Rafa
