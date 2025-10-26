@@ -1,10 +1,8 @@
 <p align="center">
-  <img src="https://github.com/Samucahub/NataBase/blob/a11dd3180472dd86c6b59d78127cc14d04f4d8f7/LOGOS/natabase.png" alt="logo"/>
+  <img src="/Images/NataBase_BigLogo.png" alt="logo" style="display:block; margin:0 auto;"/>
 </p>
 
 <h1 align="center">NataBase</h1>
-
----
 
 ## Sobre o projeto
 
