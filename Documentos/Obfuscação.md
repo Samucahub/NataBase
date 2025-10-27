@@ -1,6 +1,6 @@
 # Como ativar obfuscação:
 
-> O Android Studio já vem com uma tool de obfuscação chamada R8, mas há uma extensão para a ProGuard, a antiga, O dProtect. O dProtect esconde classes, enche o código com lixo e mais um monte de funções para não haver engraçadinhos a desmontar o nosso código.
+> O Android Studio já vem com uma tool de obfuscação chamada R8, mas há uma extensão para o R8. O dProtect. O dProtect esconde classes, enche o código com lixo e mais um monte de funções para não haver engraçadinhos a desmontar o nosso código. Só que é **SUPER PESADO** e meter isto num tablet com 2GB (mínimo que esperamos trabahar) torna-se inviável. É preferível usar o R8 e ter uma compatibilidade alta, assim como a segurança do que usar o dProtect e precisar de um tablet xpto. É como a história do SHA256 e do SHA512.
 
 ## Passo 1: Ativar a Minificação no Ficheiro de Build
 
