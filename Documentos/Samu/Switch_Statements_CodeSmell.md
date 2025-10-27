@@ -196,21 +196,6 @@ navigationView.setNavigationItemSelectedListener { menuItem ->
 
 ---
 
-## Quando Aplicar Esta Refatoração
-
-### Aplicar Quando:
-
-* Tens **vários casos condicionais** que escolhem uma ação a executar.
-* Os blocos `when` ou `switch` crescem e tornam-se difíceis de manter.
-* Queres **extender o comportamento** sem editar código existente.
-
-### Evitar Quando:
-
-* Só existe um ou dois casos simples e estáveis.
-* O comportamento não muda nem será extendido.
-
----
-
 ## Resumo da Nova Estrutura
 
 ```
