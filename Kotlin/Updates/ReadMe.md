@@ -1,0 +1,1 @@
+# Esta pasta serve para publicar alguns testes que foram feitos no código de forma separada, seja pentest, validações ou até novas funções. Esta pasta não funciona como uma nova branch mas sim como uma forma rápida de upload e download.
