@@ -1,5 +1,7 @@
-package com.exemplo.natabase
+package com.belasoft.natabase_alpha
 
+import android.content.Context
+import com.belasoft.natabase_alpha.utils.SettingsManager
 import java.io.File
 import java.util.*
 import javax.mail.*
@@ -14,17 +16,22 @@ class EmailService(
     private val toAddresses: List<String>
 ) {
     private val smtpHost = "smtp.gmail.com"
-    private val smtpPort = "465"
+    private val smtpPort = "587"
 
     fun sendExcel(file: File, subject: String, body: String) {
-        val props = Properties()
-        props["mail.smtp.host"] = smtpHost
-        props["mail.smtp.socketFactory.port"] = smtpPort
-        props["mail.smtp.socketFactory.class"] = "javax.net.ssl.SSLSocketFactory"
-        props["mail.smtp.auth"] = "true"
-        props["mail.smtp.port"] = smtpPort
+        val props = Properties().apply {
+            put("mail.smtp.host", smtpHost)
+            put("mail.smtp.port", smtpPort)
+            put("mail.smtp.auth", "true")
+            put("mail.smtp.starttls.enable", "true")
+            put("mail.smtp.ssl.trust", smtpHost)
+            put("mail.smtp.ssl.protocols", "TLSv1.2 TLSv1.3")
+            put("mail.smtp.connectiontimeout", "30000")
+            put("mail.smtp.timeout", "30000")
+            put("mail.smtp.writetimeout", "30000")
+        }
 
-        val session = Session.getDefaultInstance(props,
+        val session = Session.getInstance(props,
             object : Authenticator() {
                 override fun getPasswordAuthentication(): PasswordAuthentication {
                     return PasswordAuthentication(senderEmail, senderAppPassword)
@@ -34,10 +41,10 @@ class EmailService(
         try {
             val message = MimeMessage(session)
             message.setFrom(InternetAddress(senderEmail))
-            message.setRecipients(
-                Message.RecipientType.TO,
-                toAddresses.joinToString(",") { it }
-            )
+
+            val addresses = toAddresses.map { InternetAddress(it) }.toTypedArray()
+            message.setRecipients(Message.RecipientType.TO, addresses)
+
             message.subject = subject
 
             val multipart = MimeMultipart()
@@ -58,6 +65,12 @@ class EmailService(
         } catch (e: Exception) {
             e.printStackTrace()
             throw RuntimeException("Erro ao enviar email: ${e.message}")
+        }
+    }
+
+    companion object {
+        fun shouldSendAutoEmail(context: Context): Boolean {
+            return SettingsManager.isAutoEmailEnabled(context)
         }
     }
 }
